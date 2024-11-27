@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safezone/core/configs/theme/theme.dart';
-import 'package:safezone/presentation/auth/view/signup_page.dart';
-import 'package:safezone/presentation/bottom_nav/bottom_nav_bar.dart';
+import 'package:safezone/features/auth/view/signup_page.dart';
 
 void main() {
   runApp(const MyApp());

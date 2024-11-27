@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safezone/presentation/home_page/widgets/post_bottons.dart';
+import 'package:safezone/features/home_page/widgets/post_bottons.dart';
 
 import '../../../core/configs/theme/app_color.dart';
 

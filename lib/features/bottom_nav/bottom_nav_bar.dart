@@ -2,10 +2,10 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:safezone/core/configs/assets/app_images.dart';
 import 'package:safezone/core/configs/theme/app_color.dart';
-import 'package:safezone/presentation/account_page/view/account_page.dart';
-import 'package:safezone/presentation/chat_page/view/chat_page.dart';
-import 'package:safezone/presentation/home_page/view/home_page.dart';
-import 'package:safezone/presentation/search_page/views/search_page.dart';
+import 'package:safezone/features/account_page/view/account_page.dart';
+import 'package:safezone/features/chat_page/view/chat_page.dart';
+import 'package:safezone/features/home_page/view/home_page.dart';
+import 'package:safezone/features/post_add_page/view/post_add_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -18,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int currentPage = 0;
   List pages = [
     const HomePage(),
-    const SearchPage(),
+    const PostAddPage(),
     const ChatPage(),
     const AccountPage(),
   ];

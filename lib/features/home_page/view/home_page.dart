@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:safezone/core/configs/assets/app_images.dart';
 import 'package:safezone/core/configs/theme/app_color.dart';
 import 'package:safezone/dummy_db.dart';
-import 'package:safezone/presentation/home_page/widgets/post_card.dart';
+import 'package:safezone/features/home_page/widgets/post_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

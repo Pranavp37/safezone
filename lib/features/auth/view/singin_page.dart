@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:safezone/common/widgets/basicapp_button.dart';
+import 'package:safezone/core/common/widgets/basicapp_button.dart';
 import 'package:safezone/core/configs/assets/app_images.dart';
 import 'package:safezone/core/configs/theme/app_color.dart';
-import 'package:safezone/presentation/auth/view/singin_page.dart';
+import 'package:safezone/features/auth/view/signup_page.dart';
+import 'package:safezone/features/bottom_nav/bottom_nav_bar.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +25,20 @@ class SignupPage extends StatelessWidget {
                 height: 200,
               ),
               //
-              _fullnameTextField(context),
-              const SizedBox(height: 20),
               _emailTextField(context),
               const SizedBox(height: 20),
               _passwordTextField(context),
               const SizedBox(height: 20),
 
-              BasicappButton(onPressed: () {}, title: 'Sign Up')
+              BasicappButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BottomNavBar(),
+                        ));
+                  },
+                  title: 'Sign Up')
             ],
           ),
         ),
@@ -42,7 +49,7 @@ class SignupPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'You already have an account ?',
+              "You don't have an account ?",
               style: TextStyle(color: Colors.black),
             ),
             const SizedBox(
@@ -53,11 +60,11 @@ class SignupPage extends StatelessWidget {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SinginPage(),
+                      builder: (context) => const SignupPage(),
                     ));
               },
               child: const Text(
-                'SignsIn',
+                'SignsUp',
                 style: TextStyle(color: AppColor.primaryColor),
               ),
             ),
@@ -81,10 +88,10 @@ class SignupPage extends StatelessWidget {
     );
   }
 
-  Widget _fullnameTextField(BuildContext context) {
-    return TextFormField(
-      decoration: const InputDecoration(hintText: 'full name')
-          .applyDefaults(Theme.of(context).inputDecorationTheme),
-    );
-  }
+  // Widget _fullnameTextField(BuildContext context) {
+  //   return TextFormField(
+  //     decoration: const InputDecoration(hintText: 'full name')
+  //         .applyDefaults(Theme.of(context).inputDecorationTheme),
+  //   );
+  // }
 }
